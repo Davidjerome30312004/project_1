@@ -1,57 +1,54 @@
-YouTube Data Harvesting and Warehousing Using SQL
-Overview
+# YouTube Data Harvesting and Warehousing
+
+This project is  harvest data from YouTube using the YouTube Data API in  google developer console, process it using Pandas, store it in a SQL database, and visualize it using Streamlit.
+
+## Overview
+
 This project aims to harvest data from YouTube using the YouTube Data API and store it in a SQL database for further analysis and reporting. By leveraging the YouTube API, we can collect various data points such as video metadata, channel information, comments, likes/dislikes, and view counts.
 
-Prerequisites
+## Prerequisites
 Before running the scripts, make sure you have the following:
 
-Google Cloud Platform (GCP) account with access to the YouTube Data API.
-API key obtained from GCP for accessing the YouTube Data API.
-Python environment with necessary packages (e.g., google-api-python-client, pandas, sqlalchemy).
-SQL database (e.g., MySQL, PostgreSQL) set up and accessible.
-Setup
-Clone this repository to your local machine:
+ - Google Cloud Platform (GCP) -create an account to access to the YouTube Data API from google developer console.
+ - API key obtained from GCP for accessing the YouTube Data API to the scripts.
+ - Install Python environment with necessary packages like, google-api-python-client, pandas, sqlalchemy etc..).
+ - SQL database (e.g., MySQL, PostgreSQL) set up and accessible.
+ - Setup
+ - Clone this repository to your local machine:
 
-bash
-Copy code
-git clone https://github.com/your-username/youtube-data-warehouse.git
-Install the required Python packages:
+## modules
+  - import os
+  - import googleapiclient.discovery
+  - import googleapiclient.errors
+  - import mysql.connector as db
+  - import streamlit as st
+  - import pandas as pd 
+  - rom streamlit_option_menu import option_menu
+  - import mysql.connector
 
-bash
-Copy code
-pip install -r requirements.txt
-Obtain an API key from the Google Cloud Platform (GCP) Console for accessing the YouTube Data API.
+## step by step
+-  Create account-Create account in google developer console to retrive the apikey from GCP copy that and paste in api section.
+-  Script-Write the scripts by installing the libraries and modules to extract the details.
+-  Extraction-extract the channel info,videos id,videos info and comment info and convert into DataFrames.
+-  SQL- create a database in sql and give connection followed by create required tables to show in streamlit
+-  Streamlit-Crete a navigation  bar and call all datas and visulaize in streamlit 
 
-Configure your API key in the config.py file:
+## REFERENCE
+1. repository:
 
-python
-Copy code
-API_KEY = 'YOUR_API_KEY_HERE'
-Set up your SQL database and configure the connection details in config.py.
+    ```
+    git clone https://github.com/Davidjerome30312004/Youtube-data-harvesting-and-warehousing-using-SQL.git
+    ```
+2. install the packages as in the instalation:
 
-Usage
-Run the data harvesting scripts to fetch data from the YouTube Data API:
+    ```
+    pip install -r requirements.txt
+    ```
 
-bash
-Copy code
-python harvest_data.py
-Run the ETL (Extract, Transform, Load) process to store the harvested data in the SQL database:
 
-bash
-Copy code
-python etl_process.py
-Perform data analysis and reporting using SQL queries on the stored data.
 
-Project Structure
-harvest_data.py: Python script to fetch data from the YouTube Data API.
-etl_process.py: Python script for the ETL process to transform and load data into the SQL database.
-config.py: Configuration file for API keys and database connection details.
-sql_queries/: Directory containing SQL queries for creating tables and performing data analysis.
-requirements.txt: List of Python packages required for the project.
-Contributing
-Contributions are welcome! If you have suggestions or encounter issues, please open an issue or submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License.
 
 
