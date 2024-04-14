@@ -42,10 +42,15 @@ Before running the scripts, make sure you have the following:
 2. install the packages as in the instalation:
 
     ```
-    pip install -r requirements.txt
+    r-instalation-txt
     ```
 
+3. After installation please done above steps in the step by step method
 
+
+## streamlit
+
+Run the streamlit part in the command prompt --streamlit run yourfilename.py--.After this enjoy the youtube data harvesting webpage created by giving multiple ids and retrive the datas.
 
 
 ## License
